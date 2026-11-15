@@ -21,3 +21,4 @@ export {
   type SlotState,
   type SlotStateContext,
 } from './slots';
+export { mergeSx } from './sx';
