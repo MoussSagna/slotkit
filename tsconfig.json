@@ -19,5 +19,5 @@
     "types": ["vite/client", "node", "@testing-library/jest-dom/vitest"],
     "noEmit": true
   },
-  "include": ["src", ".storybook", "vite.config.ts", "eslint.config.js"]
+  "include": ["src", ".storybook/*.ts", ".storybook/*.tsx", "vite.config.ts", "eslint.config.js"]
 }
