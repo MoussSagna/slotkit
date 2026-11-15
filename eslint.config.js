@@ -27,7 +27,13 @@ export default tseslint.config(
     rules: {
       '@typescript-eslint/consistent-type-imports': 'error',
       '@typescript-eslint/restrict-template-expressions': ['error', { allowNumber: true }],
-      // Interdit les couleurs codées en dur dans les blocs : tout passe par le thème.
+    },
+  },
+  {
+    // Interdit les couleurs codées en dur dans les blocs : tout passe par le thème.
+    files: ['src/blocks/**/*.{ts,tsx}'],
+    ignores: ['**/*.test.{ts,tsx}'],
+    rules: {
       'no-restricted-syntax': [
         'error',
         {
@@ -37,11 +43,6 @@ export default tseslint.config(
         },
       ],
     },
-  },
-  {
-    // Les tokens sont le seul endroit où les couleurs brutes sont définies.
-    files: ['src/theme/tokens.ts'],
-    rules: { 'no-restricted-syntax': 'off' },
   },
   {
     files: ['**/*.stories.tsx', '**/*.test.{ts,tsx}', '.storybook/**'],
